@@ -1,8 +1,8 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Build_Check
+run-name: Build Check
 on: [push]
 jobs:
-  check-bats-version:
+  Build_Check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
