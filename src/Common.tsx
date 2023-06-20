@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import React from 'react';
+import Register from './Register';
 import UnreadList from './UnreadList';
 import WishList from './WishList';
 import FinishedList from './FinishedList';
@@ -53,13 +54,15 @@ const Common = () => {
                 </Toolbar>
             </AppBar>
             <Tabs value={value} onChange={handleChange} aria-label="nav tabs example" textColor='secondary' variant='fullWidth'>
+                <Tab label='登録' />
                 <Tab label='欲しい本' />
                 <Tab label='積読中' />
                 <Tab label='読破' />
             </Tabs>
-            <TabPanel value={value} index={0}><WishList /></TabPanel>
-            <TabPanel value={value} index={1}><UnreadList /></TabPanel>
-            <TabPanel value={value} index={2}><FinishedList /></TabPanel>
+            <TabPanel value={value} index={0}><Register /></TabPanel>
+            <TabPanel value={value} index={1}><WishList /></TabPanel>
+            <TabPanel value={value} index={2}><UnreadList /></TabPanel>
+            <TabPanel value={value} index={3}><FinishedList /></TabPanel>
         </Box>
     );
 }
